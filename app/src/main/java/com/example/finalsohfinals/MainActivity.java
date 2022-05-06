@@ -2,6 +2,7 @@ package com.example.finalsohfinals;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -24,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
             sql_db.execSQL("INSERT INTO exams (exam_name, exam_date, resource) VALUES ('Probability and Statistics', '09/05/2022', 'https://www.khanacademy.org/math/statistics-probability')");
 
             //Selects
-            Cursor c = sql_db.rawQuery();
+            Cursor c = sql_db.rawQuery("Select * from exams", null);
+            int ex_name_index = c.getColumnIndex("exam_name");
+            int ex_date_index = c.getColumnIndex("exam_date");
+            int resource = c.getColumnIndex("resource");
+
 
 
 

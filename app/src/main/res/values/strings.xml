@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">FinalsOhFinals</string>
 
-    <string-array name="final_exams">
-    </string-array>
+    <string-array name="final_exams"></string-array>
 </resources>
